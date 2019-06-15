@@ -9,14 +9,15 @@ def data_first(request):
 		data=request.POST
 		dic['name']=data['name']
 		dic['empid']=data['empid']
-		
-		
+
+
 		info=request.POST
 		if not os.path.isfile("Employee_info.csv"): isNew=True
+		else: isNew=False
 		with open("Employee_info.csv",'a') as ecsv:
 			fieldnames=('name','empid')
 			writer=csv.DictWriter(ecsv,fieldnames=fieldnames)
-			writer.writeheader()
+			if isNew: writer.writeheader()
 			writer.writerow(dic)
 		return render(request,'main.html')
 	else:
@@ -24,6 +25,7 @@ def data_first(request):
 def second(request):
 	dic={}
 	with open("Employee_info.csv",'r') as escv:
+		next(escv)
 		reader=csv.reader(escv)
 		for line in reader:
 			if line==[]:
@@ -31,4 +33,3 @@ def second(request):
 			else:
 				dic[line[0]]=line[1]
 	return render(request,'second.html',{'details':dic})
-
