@@ -1,0 +1,20 @@
+
+<html>
+<body background="https://ichef.bbci.co.uk/news/624/cpsprodpb/42C6/production/_102149071_cyan-blue-976x549.jpg">
+<form action="#" method="post">
+{%csrf_token%}
+
+<center><h1>Welcome to Django project Turbo.</h1></center>
+<center><img src="https://topgear.wwmindia.com/content/2019/feb/formula121550473237.jpg" alt="car" style="width:320px;height:160px;"></center>
+<center><p>"This website is under construction."</p><br><br></center>
+<form>
+<center><p>Employee Name:</p></center>
+<center><input type="text" name="name"><br></center>
+<center><p>Employee ID:</p></center>
+<center><input type="text" name="empid"><br></center>
+<center><input type="submit" value="Submit"></center>
+<center><a href="{%url 'second'%}">CHECK DETAILS</a></center>
+<center><h2>Developed by: Mohan S XII 'A'</h2></center>
+</form>
+</body>
+</html>

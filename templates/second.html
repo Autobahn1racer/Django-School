@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+{%csrf_token%}
+<h2>Employee details</h2>
+<p>List of Employees in Mercedes F1 team.</p>
+
+<table style="width:100%">
+  <caption>Employee Names and ID's</caption>
+  <tr>
+    <th>Employee Name</th>
+    <th>Employee ID</th>
+  </tr>
+{% for i,j in details.items %}
+  <tr>
+     
+    <td>{{i}}</td>
+    <td>{{j}}</td>
+     {%endfor%}
+  </tr>
+</table>
+
+</body>
+</html>
