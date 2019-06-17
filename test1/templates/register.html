@@ -1,0 +1,12 @@
+<<!DOCTYPE html>
+<html>
+<body>
+<form action="#" method="POST">
+{%csrf_token%}
+Employee Id:<input type="text" name="empid"><br>
+Name:<input type="text" name="name1"><br>
+<input type="submit" name="Register"><br>
+<a href="{%url 'details'%}">SHOW DETAILS</a>
+</form>
+</body>
+</html>
