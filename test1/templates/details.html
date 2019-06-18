@@ -1,0 +1,9 @@
+<html>
+<body>
+{%csrf_token%}
+{%for employee in employees%}
+Employee Id:{{employee.empid}}<br>
+Employee:{{employee.name}}<br>
+{%endfor%}
+</body>
+</html>
