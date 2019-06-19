@@ -1,3 +1,4 @@
+
 from django.shortcuts import render,redirect
 
 # Create your views here.
@@ -11,7 +12,7 @@ def login(request):
         if ids=='Mohan' and pswd=='1234':
             return redirect('register')
         else:
-            return render(request,'login.html')
+            return render(request,'pass_error.html')
     else:
         return render(request,'login.html')
 def register(request):

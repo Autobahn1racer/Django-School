@@ -1,12 +1,12 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<body>
+<body background="https://ichef.bbci.co.uk/news/624/cpsprodpb/42C6/production/_102149071_cyan-blue-976x549.jpg">
 <form action="#" method="POST">
 {%csrf_token%}
-Employee Id:<input type="text" name="empid"><br>
-Name:<input type="text" name="name1"><br>
-<input type="submit" name="Register"><br>
-<a href="{%url 'details'%}">SHOW DETAILS</a>
+<center>Employee Id:<input type="text" name="empid"></center><br>
+<center>Name:<input type="text" name="name1"></center><br>
+<center><input type="submit" name="Register"></center><br>
+<center><a href="{%url 'details'%}">SHOW DETAILS</center></a>
 </form>
 </body>
 </html>

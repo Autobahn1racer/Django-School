@@ -1,9 +1,11 @@
 <html>
-<body>
+<body background="https://ichef.bbci.co.uk/news/624/cpsprodpb/42C6/production/_102149071_cyan-blue-976x549.jpg">
 {%csrf_token%}
+<center><h2>Details</h2></center>
+<center><p>Our trusted employees.</p></center>
 {%for employee in employees%}
-Employee Id:{{employee.empid}}<br>
-Employee:{{employee.name}}<br>
+<center>Employee Id:{{employee.empid}}</center><br>
+<center>Employee:{{employee.name}}</center><br>
 {%endfor%}
 </body>
 </html>
