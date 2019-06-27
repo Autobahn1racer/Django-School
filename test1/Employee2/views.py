@@ -4,6 +4,7 @@ from django.shortcuts import render,redirect
 # Create your views here.
 from .models import emp
 
+
 def login(request):
     if request.method=='POST':
         data=request.POST

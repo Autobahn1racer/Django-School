@@ -2,7 +2,17 @@ from django.shortcuts import render
 import csv
 import os
 # Create your views here.
-
+def login(request):
+    if request.method=='POST':
+        data=request.POST
+        ids=data['loginid']
+        pswd=data['password']
+        if ids=='Mohan' and pswd=='1234':
+            return redirect('register')
+        else:
+            return render(request,'pass_error.html')
+    else:
+        return render(request,'login.html')
 def data_first(request):
 	dic={}
 	if request.method=='POST':
